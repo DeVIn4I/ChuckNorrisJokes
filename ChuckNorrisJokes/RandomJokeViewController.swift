@@ -11,6 +11,7 @@ import SnapKit
 final class RandomJokeViewController: UIViewController {
     
     private let networkService = NetworkService.shared
+    private let storageService = StorageService.shared
     
     private lazy var jokeLabel: UILabel = {
         let label = UILabel()
@@ -82,11 +83,11 @@ final class RandomJokeViewController: UIViewController {
         Task {
             do {
                 let joke = try await networkService.fetchRandomJoke()
-                print(joke.categories.first)
                 jokeLabel.text = joke.value
                 jokeLabel.isHidden = false
                 downloadJokeButton.isEnabled = true
                 activityIndicator.stopAnimating()
+                storageService.saveToRealm(joke)
             } catch {
                 print(error)
             }

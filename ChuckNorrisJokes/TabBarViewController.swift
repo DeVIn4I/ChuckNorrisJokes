@@ -22,7 +22,10 @@ class TabBarViewController: UITabBarController {
             selectedImage: nil
         )
         
-        let downloadJokesVC = DownloadJokeListViewController()
+        let downloadJokesVC = DownloadJokesViewController(
+            jokes: StorageService.shared.getDownloadJokes(),
+            state: .all, category: nil
+        )
         downloadJokesVC.tabBarItem = UITabBarItem(
             title: "List",
             image: UIImage(systemName: "list.bullet"),
@@ -35,8 +38,9 @@ class TabBarViewController: UITabBarController {
             image: UIImage(systemName: "rectangle.3.group"),
             selectedImage: nil
         )
+        let nav = UINavigationController(rootViewController: downloadCategoryJokesVC)
         
-        viewControllers = [randomJokeVC, downloadJokesVC, downloadCategoryJokesVC]
+        viewControllers = [randomJokeVC, downloadJokesVC, nav]
     }
 
 }
