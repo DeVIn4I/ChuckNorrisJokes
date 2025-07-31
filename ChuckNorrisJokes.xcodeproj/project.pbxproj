@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		86264A982E3A5E710044DDCD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 86264A972E3A5E710044DDCD /* RealmSwift */; };
+		86264AA72E3A65720044DDCD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 86264AA62E3A65720044DDCD /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86264A982E3A5E710044DDCD /* RealmSwift in Frameworks */,
+				86264AA72E3A65720044DDCD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +86,7 @@
 			name = ChuckNorrisJokes;
 			packageProductDependencies = (
 				86264A972E3A5E710044DDCD /* RealmSwift */,
+				86264AA62E3A65720044DDCD /* SnapKit */,
 			);
 			productName = ChuckNorrisJokes;
 			productReference = 86264A7E2E3A5E590044DDCD /* ChuckNorrisJokes.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				86264A962E3A5E710044DDCD /* XCRemoteSwiftPackageReference "realm-swift" */,
+				86264AA52E3A65720044DDCD /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 86264A7F2E3A5E590044DDCD /* Products */;
@@ -362,6 +366,14 @@
 				kind = branch;
 			};
 		};
+		86264AA52E3A65720044DDCD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 86264A962E3A5E710044DDCD /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		86264AA62E3A65720044DDCD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86264AA52E3A65720044DDCD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
